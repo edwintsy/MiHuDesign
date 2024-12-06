@@ -26,41 +26,34 @@
 <section id="portfolio" class="bg-dark text-white p-5">
   <div class="container">
     <h2 class="text-center mb-5">My Work</h2>
-    <!-- 第一层：Drawing -->
-    <div class="row mb-5">
-      <div class="col text-center">
-        <div class="card bg-dark border-0">
-          <img src="images/Drawing/S__7512071.JPG" class="card-img-top mx-auto" alt="Drawing">
-          <div class="card-body">
-            <a href="drawing.html" class="text-white h5">Drawing</a>
-          </div>
-        </div>
-      </div>
+    <!-- Carousel Section -->
+<div id="portfolio-carousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- 第一张幻灯片 -->
+    <div class="carousel-item active">
+      <img src="images/Drawing/S__7512071.JPG" class="d-block w-100" alt="Drawing">
     </div>
-    <!-- 第二层：3D Modeling -->
-    <div class="row mb-5">
-      <div class="col text-center">
-        <div class="card bg-dark border-0">
-          <img src="images/myroom_tw/2.png" class="card-img-top mx-auto" alt="3D Modeling">
-          <div class="card-body">
-            <a href="3dmodeling.html" class="text-white h5">3D Modeling</a>
-          </div>
-        </div>
-      </div>
+    <!-- 第二张幻灯片 -->
+    <div class="carousel-item">
+      <img src="images/myroom_tw/2.png" class="d-block w-100" alt="3D Modeling">
     </div>
-    <!-- 第三层：Photography -->
-    <div class="row">
-      <div class="col text-center">
-        <div class="card bg-dark border-0">
-          <img src="images/Photography/73469.jpg" class="card-img-top mx-auto" alt="Photography">
-          <div class="card-body">
-            <a href="photography.html" class="text-white h5">Photography</a>
-          </div>
-        </div>
-      </div>
+    <!-- 第三张幻灯片 -->
+    <div class="carousel-item">
+      <img src="images/Photography/73469.jpg" class="d-block w-100" alt="Photography">
     </div>
+    <!-- 更多幻灯片可以按相同格式添加 -->
   </div>
-</section>
+
+  <!-- 左右切换按钮 -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
   <!-- Contact Section -->

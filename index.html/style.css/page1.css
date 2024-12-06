@@ -20,22 +20,25 @@ header {
 
 .card {
   margin: 30px auto; /* 垂直间距 */
-  max-width: 800px; /* 每个卡片的最大宽度 */
+  max-width: 700px; /* 每个卡片的最大宽度 */
   background: #1c1c1c; /* 卡片的背景色 */
   color: #fff; /* 文本颜色 */
   border-radius: 10px; /* 圆角 */
   overflow: hidden; /* 隐藏溢出内容 */
   text-align: center; /* 居中对齐 */
+  padding: 20px; /* 内边距 */
 }
 
 .card img {
-  width: 100%;
+  max-width: 500px; /* 限制图片最大宽度 */
+  width: 100%; /* 图片自适应卡片宽度 */
   height: auto; /* 保持图片比例 */
+  margin: 0 auto; /* 图片居中 */
 }
 
 .card-title {
-  padding: 20px 0;
-  font-size: 1.5rem;
+  padding: 15px 0; /* 缩小文字与图片间的间距 */
+  font-size: 1.3rem; /* 调整文字大小 */
   font-weight: bold;
   color: #fff; /* 标题的颜色 */
 }
