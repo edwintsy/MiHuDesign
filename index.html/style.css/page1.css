@@ -29,11 +29,15 @@ header {
   padding: 20px; /* 内边距 */
 }
 
-.card img {
-  max-width: 500px; /* 限制图片最大宽度 */
-  width: 100%; /* 图片自适应卡片宽度 */
+.carousel-inner {
+  max-width: 500px; /* 限制轮播图最大宽度 */
+  margin: 0 auto; /* 轮播图居中 */
+}
+
+.carousel-item img {
+  width: 100%; /* 图片自适应轮播容器宽度 */
   height: auto; /* 保持图片比例 */
-  margin: 0 auto; /* 图片居中 */
+  border-radius: 10px; /* 圆角 */
 }
 
 .card-title {
@@ -42,6 +46,3 @@ header {
   font-weight: bold;
   color: #fff; /* 标题的颜色 */
 }
-
-
-

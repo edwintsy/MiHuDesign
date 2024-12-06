@@ -10,7 +10,7 @@
 <body>
   <!-- Header Section -->
   <header class="bg-dark text-white text-center p-4">
-    <h1>My Portfelis</h1>
+    <h1>My Portfolio</h1>
     <p>Explore my work and services</p>
   </header>
 
@@ -22,59 +22,101 @@
     </div>
   </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="bg-dark text-white p-5">
-  <div class="container">
-    <h2 class="text-center mb-5">My Work</h2>
-    <!-- 第一层：Drawing -->
-    <div class="row mb-5">
-      <div class="col text-center">
-        <div class="card bg-dark border-0">
-          <img src="images/Drawing/S__7512071.JPG" class="card-img-top mx-auto" alt="Drawing">
-          <div class="card-body">
-            <a href="drawing.html" class="text-white h5">Drawing</a>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="bg-dark text-white p-5">
+    <div class="container">
+      <h2 class="text-center mb-5">My Work</h2>
+      
+      <!-- 第一层：Drawing -->
+      <div class="row mb-5">
+        <div class="col text-center">
+          <div class="card bg-dark border-0">
+            <div id="carouselDrawing" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/Drawing/S__7512071.JPG" class="d-block w-100" alt="Drawing 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Drawing/example2.jpg" class="d-block w-100" alt="Drawing 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Drawing/example3.jpg" class="d-block w-100" alt="Drawing 3">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="drawing.html" class="text-white h5">Drawing</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- 第二层：3D Modeling -->
-    <div class="row mb-5">
-      <div class="col text-center">
-        <div class="card bg-dark border-0">
-          <img src="images/myroom_tw/2.png" class="card-img-top mx-auto" alt="3D Modeling">
-          <div class="card-body">
-            <a href="3dmodeling.html" class="text-white h5">3D Modeling</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 第三层：Photography -->
-    <div class="row">
-      <div class="col text-center">
-        <div class="card bg-dark border-0">
-          <img src="images/Photography/73469.jpg" class="card-img-top mx-auto" alt="Photography">
-          <div class="card-body">
-            <a href="photography.html" class="text-white h5">Photography</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
+      <!-- 第二层：3D Modeling -->
+      <div class="row mb-5">
+        <div class="col text-center">
+          <div class="card bg-dark border-0">
+            <div id="carousel3DModeling" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/myroom_tw/2.png" class="d-block w-100" alt="3D Model 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/myroom_tw/1.png" class="d-block w-100" alt="3D Model 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/myroom_tw/4.png" class="d-block w-100" alt="3D Model 3">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="3dmodeling.html" class="text-white h5">3D Modeling</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三层：Photography -->
+      <div class="row">
+        <div class="col text-center">
+          <div class="card bg-dark border-0">
+            <div id="carouselPhotography" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/Photography/73469.jpg" class="d-block w-100" alt="Photography 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Photography/example2.jpg" class="d-block w-100" alt="Photography 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Photography/example3.jpg" class="d-block w-100" alt="Photography 3">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="photography.html" class="text-white h5">Photography</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Contact Section -->
-<section id="contact" class="p-5 text-center">
-  <h2>Contact Me</h2>
-  <p>Follow me on my social platforms:</p>
-  <a href="https://www.instagram.com/yong00_1006" class="btn btn-primary mx-2" target="_blank">Instagram</a>
-  <a href="https://twitter.com/" class="btn btn-info mx-2" target="_blank">Twitter</a>
-  <a href="https://www.facebook.com/siyong.tan.7" class="btn btn-secondary mx-2" target="_blank">Facebook</a>
-</section>
+  <section id="contact" class="p-5 text-center">
+    <h2>Contact Me</h2>
+    <p>Follow me on my social platforms:</p>
+    <a href="https://www.instagram.com/yong00_1006" class="btn btn-primary mx-2" target="_blank">Instagram</a>
+    <a href="https://twitter.com/" class="btn btn-info mx-2" target="_blank">Twitter</a>
+    <a href="https://www.facebook.com/siyong.tan.7" class="btn btn-secondary mx-2" target="_blank">Facebook</a>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center p-3">
-  <p>&copy; 2024 My Portfelis. All Rights Reserved.</p>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
