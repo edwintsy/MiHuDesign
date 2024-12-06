@@ -20,7 +20,7 @@ header {
 
 .card {
   margin: 30px auto; /* 垂直间距 */
-  max-width: 700px; /* 每个卡片的最大宽度 */
+  max-width: 600px; /* 限制卡片宽度 */
   background: #1c1c1c; /* 卡片的背景色 */
   color: #fff; /* 文本颜色 */
   border-radius: 10px; /* 圆角 */
@@ -31,13 +31,14 @@ header {
 
 .carousel-inner {
   max-width: 500px; /* 限制轮播图最大宽度 */
-  margin: 0 auto; /* 轮播图居中 */
+  margin: 0 auto; /* 居中 */
 }
 
 .carousel-item img {
-  width: 100%; /* 图片自适应轮播容器宽度 */
-  height: auto; /* 保持图片比例 */
-  border-radius: 10px; /* 圆角 */
+  width: 100%; /* 图片适应轮播图宽度 */
+  height: 300px; /* 固定高度，图片适中 */
+  object-fit: cover; /* 保持比例并填充容器 */
+  border-radius: 5px; /* 圆角 */
 }
 
 .card-title {
