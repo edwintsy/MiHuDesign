@@ -15,35 +15,35 @@ header {
 }
 
 #portfolio {
-  background: #000; /* 黑色背景 */
+  background: #000; 
 }
 
 .card {
-  margin: 30px auto; /* 垂直间距 */
-  max-width: 600px; /* 限制卡片宽度 */
-  background: #1c1c1c; /* 卡片的背景色 */
-  color: #fff; /* 文本颜色 */
-  border-radius: 10px; /* 圆角 */
-  overflow: hidden; /* 隐藏溢出内容 */
-  text-align: center; /* 居中对齐 */
-  padding: 20px; /* 内边距 */
+  margin: 30px auto; 
+  max-width: 600px; 
+  background: #1c1c1c; 
+  color: #fff; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  text-align: center; 
+  padding: 20px; /
 }
 
 .carousel-inner {
-  max-width: 500px; /* 限制轮播图最大宽度 */
-  margin: 0 auto; /* 居中 */
+  max-width: 500px; 
+  margin: 0 auto; 
 }
 
 .carousel-item img {
-  width: 100%; /* 图片适应轮播图宽度 */
-  height: 200px; /* 固定高度，图片适中 */
-  object-fit: cover; /* 保持比例并填充容器 */
-  border-radius: 5px; /* 圆角 */
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 5px; 
 }
 
 .card-title {
-  padding: 15px 0; /* 缩小文字与图片间的间距 */
-  font-size: 1.3rem; /* 调整文字大小 */
+  padding: 15px 0; 
+  font-size: 1.3rem; 
   font-weight: bold;
-  color: #fff; /* 标题的颜色 */
+  color: #fff; 
 }
