@@ -20,7 +20,7 @@ header {
 
 .card {
   margin: 30px auto; 
-  max-width: 600px; /* 控制卡片整体宽度 */
+  max-width: 700px; /* 限制卡片宽度 */
   background: #1c1c1c; 
   color: #fff; 
   border-radius: 10px; 
@@ -29,25 +29,18 @@ header {
   padding: 20px; 
 }
 
-/* 统一调整轮播图图片大小 */
-.carousel-inner img {
-  max-width: 100%; /* 图片最大宽度自适应容器 */
-  width: 100%; /* 强制宽度自适应 */
-  height: auto; /* 保持比例 */
-  max-height: 540px; /* 限制图片最大高度 */
-  object-fit: cover; /* 图片填充模式 */
-  margin: 0 auto; /* 居中对齐 */
-}
-
-/* 每个轮播项目单独设置 */
+/* 严格控制轮播图片大小，确保一致 */
+.carousel-inner img,
 .carousel-item img {
-  max-width: 100%; /* 强制宽度与容器一致 */
-  width: auto; /* 自动适应宽度 */
-  height: 400px; /* 固定高度为400px */
-  object-fit: contain; /* 显示完整图片 */
-  border-radius: 5px; /* 圆角边框 */
+  width: 100%; /* 自适应宽度 */
+  max-width: 700px; /* 限制最大宽度为700px */
+  max-height: 375px; /* 限制高度为375px（按1780x959比例计算） */
+  object-fit: contain; /* 保持图片完整显示 */
+  margin: 0 auto; /* 居中 */
+  display: block; /* 确保图片为块级元素 */
 }
 
+/* 卡片标题样式 */
 .card-title {
   padding: 15px 0; 
   font-size: 1.3rem; 
