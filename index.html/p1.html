@@ -9,51 +9,53 @@
 </head>
 <body>
   <!-- Header Section -->
-  <header class="parallax" style="background-image: url('images/header-bg.jpg');">
-    <div>
-      <h1>Welcome to My Portfolio</h1>
-      <p>Discover my creativity and projects</p>
-      <a href="#portfolio" class="btn btn-custom mt-3">Explore Now</a>
+  <header class="parallax text-center" style="background-image: url('images/header-bg.jpg');">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-white" style="height: 100vh;">
+      <img src="images/profile-picture.jpg" alt="Profile" class="rounded-circle mb-4" style="width: 150px; height: 150px;">
+      <h1 class="display-4">Welcome to My Portfolio</h1>
+      <p class="lead">Discover my creativity and projects</p>
+      <a href="#about" class="btn btn-primary mt-3">Explore More</a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about">
-    <div class="container text-center">
+  <section id="about" class="py-5 bg-light text-center">
+    <div class="container">
       <h2>About Me</h2>
       <p class="lead">I am a passionate designer focused on crafting unique visual experiences.</p>
+      <p>I specialize in digital art, 3D modeling, and photography, bringing ideas to life with creativity and skill.</p>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="parallax" style="background-image: url('images/portfolio-bg.jpg');">
+  <section id="portfolio" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5">My Work</h2>
-
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
             <img src="images/Drawing/S__7512071.JPG" class="card-img-top" alt="Drawing">
             <div class="card-body text-center">
-              <a href="drawing.html" class="btn btn-primary">Drawing</a>
+              <h5 class="card-title">Drawing</h5>
+              <a href="drawing.html" class="btn btn-primary">View Gallery</a>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
+        <div class="col-md-4">
+          <div class="card h-100">
             <img src="images/myroom_tw/2.png" class="card-img-top" alt="3D Modeling">
             <div class="card-body text-center">
-              <a href="3dmodeling.html" class="btn btn-primary">3D Modeling</a>
+              <h5 class="card-title">3D Modeling</h5>
+              <a href="3dmodeling.html" class="btn btn-primary">View Gallery</a>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
+        <div class="col-md-4">
+          <div class="card h-100">
             <img src="images/Photography/73469.jpg" class="card-img-top" alt="Photography">
             <div class="card-body text-center">
-              <a href="photography.html" class="btn btn-primary">Photography</a>
+              <h5 class="card-title">Photography</h5>
+              <a href="photography.html" class="btn btn-primary">View Gallery</a>
             </div>
           </div>
         </div>
@@ -62,20 +64,20 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="text-center">
+  <section id="contact" class="py-5 bg-light text-center">
     <div class="container">
       <h2>Contact Me</h2>
       <p>Follow me on social media or send me a message!</p>
-      <div>
-        <a href="https://www.instagram.com/yong00_1006" class="btn btn-light mx-2">Instagram</a>
-        <a href="https://twitter.com/" class="btn btn-light mx-2">Twitter</a>
-        <a href="https://www.facebook.com/siyong.tan.7" class="btn btn-light mx-2">Facebook</a>
+      <div class="d-flex justify-content-center">
+        <a href="https://www.instagram.com/yong00_1006" class="btn btn-outline-dark mx-2">Instagram</a>
+        <a href="https://twitter.com/" class="btn btn-outline-dark mx-2">Twitter</a>
+        <a href="https://www.facebook.com/siyong.tan.7" class="btn btn-outline-dark mx-2">Facebook</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center">
+  <footer class="text-center py-3 bg-dark text-white">
     <p>&copy; 2024 My Portfolio. Designed with passion.</p>
   </footer>
 
