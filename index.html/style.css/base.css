@@ -43,12 +43,11 @@ section {
 
 /* About 样式 */
 #about {
-  background: url(url(../images/Photography/S__7536643.jpg)) no-repeat center center/cover;
-  background-attachment: fixed;
-  color: black;
-  padding: 5rem 0;
+  background: url('./images/Photography/S__7536643.jpg') no-repeat center center;
+  background-size: 150%; /* 将背景图片放大至 150% */
+  background-position: center top; /* 确保顶部对齐 */
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
 #about > div:nth-child(2) {
