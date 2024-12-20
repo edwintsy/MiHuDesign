@@ -3,102 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Personal Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Loading Animation -->
-  <div id="loading">
-    <img src="loading-icon.png" alt="Loading...">
-  </div>
-
-  <!-- Header Section -->
-  <header>
-    <h1>My Enhanced Portfolio</h1>
-    <p>Explore my creative works in drawing, 3D modeling, and photography</p>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="p-5 text-center">
-    <h2>About Me</h2>
-    <p class="lead">I am a creative designer passionate about photography, 3D modeling, and digital art.</p>
+  <!-- Fullscreen Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm [Your Name]</h1>
+      <p>A creative professional building awesome websites and designs.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="bg-dark text-white p-5">
+  <!-- About Section -->
+  <section id="about" class="section">
     <div class="container">
-      <h2 class="text-center mb-5">My Work</h2>
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dui at libero cursus, non facilisis libero placerat.</p>
+    </div>
+  </section>
 
-      <!-- Search Functionality -->
-      <div class="text-center mb-4">
-        <input type="text" id="search" class="form-control w-50 mx-auto" placeholder="Search for works..." onkeyup="filterWorks()">
-      </div>
-
-      <div id="portfolio-container" class="portfolio-grid">
-        <!-- Dynamically Loaded Content -->
+  <!-- Services Section -->
+  <section id="services" class="section bg-light">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>Create responsive and beautiful websites.</p>
+        </div>
+        <div class="card">
+          <h3>Graphic Design</h3>
+          <p>Design stunning graphics and logos.</p>
+        </div>
+        <div class="card">
+          <h3>Consulting</h3>
+          <p>Help businesses achieve their digital goals.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="p-5 text-center">
-    <h2>Contact Me</h2>
-    <p>Follow me on my social platforms:</p>
-    <a href="https://www.instagram.com/yong00_1006" class="btn btn-primary mx-2" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://twitter.com/" class="btn btn-info mx-2" target="_blank" rel="noopener noreferrer">Twitter</a>
-    <a href="https://www.facebook.com/siyong.tan.7" class="btn btn-secondary mx-2" target="_blank" rel="noopener noreferrer">Facebook</a>
+  <section id="contact" class="section">
+    <div class="container text-center">
+      <h2>Contact Me</h2>
+      <p>I'd love to hear from you! Drop me a message:</p>
+      <a href="mailto:example@example.com" class="btn">Email Me</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center p-3">
-    <p>&copy; 2024 My Enhanced Portfolio. All Rights Reserved.</p>
+  <footer class="footer">
+    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Hide loading animation after page load
-    window.addEventListener('load', () => {
-      document.getElementById('loading').style.display = 'none';
-    });
-
-    // Mock JSON data for portfolio works
-    const works = [
-      { title: 'Drawing 1', description: 'A creative sketch.', image: 'images/Drawing/S__7512071.JPG' },
-      { title: '3D Model 1', description: 'A detailed 3D room model.', image: 'images/myroom_tw/1.png' },
-      { title: 'Photography 1', description: 'A stunning landscape photo.', image: 'images/Photography/73469.jpg' }
-    ];
-
-    // Dynamically load portfolio works
-    const container = document.getElementById('portfolio-container');
-    works.forEach(work => {
-      const card = document.createElement('div');
-      card.classList.add('card', 'bg-dark', 'text-white');
-      card.innerHTML = `
-        <img src="${work.image}" class="card-img-top" alt="${work.title}">
-        <div class="card-body">
-          <h5 class="card-title">${work.title}</h5>
-          <p class="card-text">${work.description}</p>
-        </div>
-      `;
-      container.appendChild(card);
-    });
-
-    // Filter portfolio works
-    function filterWorks() {
-      const searchValue = document.getElementById('search').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        if (title.includes(searchValue)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
