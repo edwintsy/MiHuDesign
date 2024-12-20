@@ -3,85 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="components.css">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hello, I'm [Your Name]</h1>
-      <p>A creative professional building awesome websites and designs.</p>
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </section>
+  <!-- Header Section -->
+  <header class="bg-dark text-white text-center p-4">
+    <h1>My Portfolio</h1>
+    <p>Explore my work and services</p>
+  </header>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about" class="p-5">
     <div class="container text-center">
       <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dui at libero cursus, non facilisis libero placerat.</p>
+      <p class="lead">I am a creative designer passionate about photography, 3D modeling, and digital art.</p>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="section bg-light">
+  <section id="portfolio" class="bg-dark text-white p-5">
     <div class="container">
-      <h2 class="text-center mb-4">Portfolio</h2>
-      <div class="cards">
-        <!-- Example Card 1 -->
-        <div class="card">
-          <img src="images/project1.jpg" alt="Project 1" class="card-img">
-          <h3>Project 1</h3>
-          <p>A web design project showcasing modern layouts.</p>
-        </div>
-        <!-- Example Card 2 -->
-        <div class="card">
-          <img src="images/project2.jpg" alt="Project 2" class="card-img">
-          <h3>Project 2</h3>
-          <p>A graphic design project with stunning visuals.</p>
-        </div>
-        <!-- Example Card 3 -->
-        <div class="card">
-          <img src="images/project3.jpg" alt="Project 3" class="card-img">
-          <h3>Project 3</h3>
-          <p>A 3D modeling project for architectural visualization.</p>
+      <h2 class="text-center mb-5">My Work</h2>
+
+      <!-- 第一层：Drawing -->
+      <div class="row mb-5">
+        <div class="col text-center">
+          <div class="card bg-dark border-0">
+            <div id="carouselDrawing" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/Drawing/S__7512071.JPG" class="d-block w-100" alt="Drawing 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Drawing/IMG_1171.JPEG" class="d-block w-100" alt="Drawing 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Drawing/IMG_2091.JPEG" class="d-block w-100" alt="Drawing 3">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="drawing.html" class="text-white h5">Drawing</a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- 第二层：3D Modeling -->
+      <div class="row mb-5">
+        <div class="col text-center">
+          <div class="card bg-dark border-0">
+            <div id="carousel3DModeling" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/myroom_tw/2.png" class="d-block w-100" alt="3D Model 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/myroom_tw/1.png" class="d-block w-100" alt="3D Model 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/myroom_tw/3.png" class="d-block w-100" alt="3D Model 3">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="3dmodeling.html" class="text-white h5">3D Modeling</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三层：Photography -->
+      <div class="row">
+        <div class="col text-center">
+          <div class="card bg-dark border-0">
+            <div id="carouselPhotography" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/Photography/73469.jpg" class="d-block w-100" alt="Photography 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Photography/cwt31day1-6.jpg" class="d-block w-100" alt="Photography 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Photography/cwt31day1-19.jpg" class="d-block w-100" alt="Photography 3">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="photography.html" class="text-white h5">Photography</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container text-center">
-      <h2>Contact Me</h2>
-      <p>I'd love to hear from you! Drop me a message:</p>
-      <a href="mailto:example@example.com" class="btn">Email Me</a>
-    </div>
+  <section id="contact" class="p-5 text-center">
+    <h2>Contact Me</h2>
+    <p>Follow me on my social platforms:</p>
+    <a href="https://www.instagram.com/yong00_1006" class="btn btn-primary mx-2" target="_blank">Instagram</a>
+    <a href="https://twitter.com/" class="btn btn-info mx-2" target="_blank">Twitter</a>
+    <a href="https://www.facebook.com/siyong.tan.7" class="btn btn-secondary mx-2" target="_blank">Facebook</a>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
   </footer>
 
   <!-- Scripts -->
