@@ -3,12 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <title>Combined Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
 </head>
 <body>
-  <!-- Fullscreen Section -->
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <ul class="navbar-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Hello, I'm [Your Name]</h1>
@@ -19,28 +32,28 @@
 
   <!-- About Section -->
   <section id="about" class="section">
-    <div class="container">
+    <div class="container text-center">
       <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dui at libero cursus, non facilisis libero placerat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="section bg-light">
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section bg-light">
     <div class="container">
-      <h2>Services</h2>
+      <h2 class="text-center mb-4">Portfolio</h2>
       <div class="cards">
         <div class="card">
-          <h3>Web Design</h3>
-          <p>Create responsive and beautiful websites.</p>
+          <h3>Project 1</h3>
+          <p>Brief description of the project.</p>
         </div>
         <div class="card">
-          <h3>Graphic Design</h3>
-          <p>Design stunning graphics and logos.</p>
+          <h3>Project 2</h3>
+          <p>Brief description of the project.</p>
         </div>
         <div class="card">
-          <h3>Consulting</h3>
-          <p>Help businesses achieve their digital goals.</p>
+          <h3>Project 3</h3>
+          <p>Brief description of the project.</p>
         </div>
       </div>
     </div>
@@ -59,5 +72,7 @@
   <footer class="footer">
     <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
