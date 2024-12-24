@@ -41,30 +41,33 @@ section {
   padding: 5rem 0;
 }
 
+/* 确保 About Me 的样式生效 */
 #about {
   background: url('./images/Photography/S__7536643.jpg') no-repeat center center;
-  background-size: cover; /* 确保背景图片填满区域 */
-  min-height: 100vh; /* 设置区域高度为视口高度 */
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-#about .container {
-  height: 100%; /* 容器高度填满背景 */
-  display: flex; /* 启用 Flex 布局 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
+#about .text-container {
+  text-align: center;
+  color: white;
 }
 
 .dynamic-text {
-  transform: translateY(50px); /* 初始状态：向下偏移 */
+  transform: translateY(50px); /* 初始位置偏移 */
   opacity: 0; /* 初始透明 */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* 动画效果 */
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .dynamic-text.visible {
-  transform: translateY(0); /* 滑入原位 */
+  transform: translateY(0); /* 回归原位 */
   opacity: 1; /* 完全显示 */
 }
+
 
 /* Portfolio 样式 */
 #portfolio {
