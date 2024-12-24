@@ -41,32 +41,39 @@ section {
   padding: 5rem 0;
 }
 
-/* 确保 About Me 的样式生效 */
+/* 确保图片和文字居中 */
 #about {
-  background: url('./images/Photography/S__7536643.jpg') no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-#about .text-container {
+  min-height: 100vh;
   text-align: center;
-  color: white;
+  background-size: cover;
+  background-position: center;
 }
 
+#about h2, #about p {
+  background: rgba(0, 0, 0, 0.6); /* 半透明背景 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 文字阴影 */
+}
+
+/* 动态效果 */
 .dynamic-text {
-  transform: translateY(50px); /* 初始位置偏移 */
-  opacity: 0; /* 初始透明 */
-  transition: transform 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .dynamic-text.visible {
-  transform: translateY(0); /* 回归原位 */
-  opacity: 1; /* 完全显示 */
+  opacity: 1;
+  transform: translateY(0);
 }
+
 
 
 /* Portfolio 样式 */
