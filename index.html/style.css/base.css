@@ -41,14 +41,13 @@ section {
   padding: 5rem 0;
 }
 
-/* About 样式 */
 #about {
   background: url('./images/Photography/S__7536643.jpg') no-repeat center center;
-  background-size: 150%; /* 将背景图片放大至 150% */
-  background-position: center top; /* 确保顶部对齐 */
-  min-height: 100vh;
+  background-size: cover; /* 确保背景图片覆盖整个区域 */
+  min-height: 100vh; /* 设置区域高度为视口高度 */
   position: relative;
 }
+
 
 #about > div:nth-child(2) {
   background: rgba(255, 255, 255, 0.7); /* 半透明遮罩 */
