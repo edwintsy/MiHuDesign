@@ -41,16 +41,17 @@ section {
   padding: 5rem 0;
 }
 
-/* About Section 样式 */
+/* About 样式 */
 #about {
   background-image: url('./images/Photography/S__7536643.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .about-content {
@@ -68,16 +69,36 @@ section {
   margin: 10px 0;
 }
 
-/* 动态文字效果 */
+/* 动态效果 */
 .dynamic-text {
   opacity: 0;
-  transform: translateY(50px); /* 初始位置向下 */
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .dynamic-text.visible {
   opacity: 1;
-  transform: translateY(0); /* 回到原位置 */
+  transform: translateY(0);
+}
+
+/* 动态效果隐藏状态 */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 动态效果可见状态 */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 修复偏移问题，保持文字位置居中 */
+#about .dynamic-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
 
