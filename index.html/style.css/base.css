@@ -72,6 +72,7 @@ section {
 /* 动态效果 */
 .dynamic-text {
   opacity: 0;
+  text-align: center;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -158,3 +159,13 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
 }
+  
+#zoom-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  transition: font-size 0.25s ease-out;
+}
+
