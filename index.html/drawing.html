@@ -54,16 +54,20 @@
     .modal-content {
       background: transparent;
       border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #modalImage {
-      max-width: 90%;
-      max-height: 90vh;
+      max-width: 95vw; /* 使用几乎全屏的宽度 */
+      max-height: 95vh; /* 使用几乎全屏的高度 */
       border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
     }
 
-    .modal-backdrop {
-      background-color: rgba(0, 0, 0, 0.8); /* 设置背景更深 */
+    #modalImage:hover {
+      transform: scale(1.1); /* 鼠标悬停时放大 */
     }
   </style>
 </head>
@@ -101,7 +105,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body" id="modalBody">
-          <img id="modalImage" src="" alt="Expanded View">
+          <img id="modalImage" src="" alt="Expanded View" class="img-fluid">
         </div>
       </div>
     </div>
@@ -113,9 +117,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // 动态更新模态框中的图片
     const modalImage = document.getElementById('modalImage');
     const galleryImages = document.querySelectorAll('.gallery img');
     const modalBody = document.getElementById('modalBody');
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
 
     galleryImages.forEach(img => {
       img.addEventListener('click', () => {
@@ -123,10 +129,9 @@
       });
     });
 
-    // 允许点击图片或模态框背景关闭模态框
+    // 点击模态框关闭
     modalBody.addEventListener('click', () => {
-      const modal = bootstrap.Modal.getInstance(document.getElementById('imageModal'));
-      modal.hide();
+      imageModal.hide();
     });
   </script>
 </body>
