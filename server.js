@@ -8,7 +8,7 @@ var path = require("path");
 //web root
 server.use(express.static(__dirname));
 server.use(bodyParser.json());
-server.use(bodyParser.urlencoded());
+
 
 var fileUpload = require("express-fileupload");
 server.use(fileUpload({defCharset:'utf8', defParamCharset:'utf8'}));
@@ -53,8 +53,8 @@ server.post("/contact_me", (req,res)=>{
      res.redirect("/#contact");
 })
 
-server.listen(80, ()=>{
-    console.log("Server is running at port 80.");
+server.listen(8008, ()=>{
+    console.log("Server is running at port 8008.");
 })
 
 server.get('/',(req,res) =>{
