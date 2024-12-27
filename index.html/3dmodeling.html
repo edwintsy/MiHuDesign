@@ -20,12 +20,6 @@
       text-align: center;
     }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
     .gallery {
       padding: 40px 20px;
     }
@@ -66,14 +60,41 @@
     }
 
     #modalImage {
-      max-width: 100%;
-      max-height: 90vh;
+      max-width: 95vw;
+      max-height: 95vh;
       border-radius: 10px;
       transition: transform 0.3s ease-in-out;
     }
 
     #modalImage:hover {
       transform: scale(1.1);
+    }
+
+    /* 居中标题样式 */
+    .section-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 40px; /* 增加顶部间距，拉开与上方的内容距离 */
+  font-size: 3rem; /* 调整字体大小 */
+  color: #333; /* 设置一个更显眼的颜色 */
+}
+
+
+    /* 视频区域样式 */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    .video-container video {
+      width: 70%;
+      height: auto;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -83,10 +104,20 @@
     <p>Explore my collection of 3D modeling works</p>
   </header>
 
-  <div class="container">
+  <!-- 视频部分 -->
+  <section>
+    <h2 class="section-header">My Room (tw)</h2>
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="images/myroom_tw/mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <div class="container gallery">
     <!-- 第一部分 -->
     <section>
-      <h2 class="section-header">My Room (tw)</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <img src="images/myroom_tw/1.png" alt="Room 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/myroom_tw/1.png">
@@ -111,16 +142,23 @@
 
     <!-- 第二部分 -->
     <section>
-      <h2 class="section-header">Character Modeling</h2>
+      <h2 class="section-header">Realistic Grass Movement</h2>
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="images/japan/jpmp4.MP4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
       <div class="row g-4">
         <div class="col-md-4">
-          <img src="images/3dmodeling/character1.jpg" alt="Character 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/3dmodeling/character1.jpg">
+          <img src="images/japan/White Model.JPEG" alt="Character 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/japan/White Model.JPEG">
         </div>
         <div class="col-md-4">
-          <img src="images/3dmodeling/character2.jpg" alt="Character 2" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/3dmodeling/character2.jpg">
+          <img src="images/japan/untitled.PNG" alt="Character 2" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/japan/untitled.PNG">
         </div>
         <div class="col-md-4">
-          <img src="images/3dmodeling/character3.jpg" alt="Character 3" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/3dmodeling/character3.jpg">
+          <img src="images/japan/2.PNG" alt="Character 3" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="images/japan/2.PNG">
         </div>
       </div>
     </section>
