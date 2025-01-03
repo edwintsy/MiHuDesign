@@ -22,18 +22,7 @@
       color: white;
       text-align: center;
       position: relative;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      z-index: 2;
-    }
-
-    header p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      z-index: 2;
+      overflow: hidden;
     }
 
     header::before {
@@ -50,55 +39,86 @@
     .content {
       position: relative;
       z-index: 2;
+      transition: transform 0.5s ease;
     }
 
-    .intro {
-      padding: 80px 20px;
-      text-align: center;
+    .scrolled .content {
+      transform: translateX(100%);
     }
 
-    .intro h2 {
+    .dynamic-text {
+      font-size: 4rem;
+      font-weight: bold;
+      transition: transform 0.5s ease;
+    }
+
+    .sub-text {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      transition: opacity 0.5s ease;
+    }
+
+    #about {
+      position: relative;
+      background-image: url('images/Photography/S__7536643.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #about .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(5px);
+    }
+
+    #about .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      position: relative;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    #about .col-md-5 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #about .col-md-7 {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    #about .col-md-7 h2 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-weight: bold;
+      color: #333;
     }
 
-    .intro p {
+    #about .col-md-7 p {
       font-size: 1.2rem;
       line-height: 1.8;
       color: #555;
     }
 
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    section h2 {
+    #portfolio h2, #contact h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
     }
 
-    .gallery {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .gallery img, .gallery video {
-      flex-shrink: 0;
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      scroll-snap-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover, .gallery video:hover {
-      transform: scale(1.05);
+    #contact p {
+      font-size: 1.2rem;
     }
 
     footer {
@@ -108,15 +128,9 @@
       text-align: center;
     }
 
-    .dynamic-text {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .dynamic-text.visible {
-      opacity: 1;
-      transform: translateY(0);
+    footer p {
+      margin: 0;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -125,36 +139,30 @@
   <header>
     <div class="content">
       <h1 class="dynamic-text">Welcome to My Portfolio</h1>
-      <p class="dynamic-text">Discover my creativity and projects</p>
+      <p class="sub-text">Discover my creativity and projects</p>
     </div>
   </header>
 
-  <section id="about" style="position: relative; background-image: url('images/Photography/S__7536643.jpg'); background-size: cover; background-position: center; min-height: 100vh;">
-    <!-- 半透明背景色 -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7);"></div>
-  
-    <!-- 内容部分 -->
-    <div class="container d-flex align-items-center" style="height: 100%; position: relative; z-index: 2;">
-      <!-- 左侧个人照片 -->
-      <div class="col-md-5 text-center">
-        <img src="images/Photography/121260.jpg" alt="個人照片" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-      </div>      
-  
-      <!-- 右侧文字介绍 -->
-      <div class="col-md-7" style="padding-left: 20px;">
-        <h2 style="font-size: 2.5rem; font-weight: bold; color: #333;">關於我</h2>
-        <p style="font-size: 1.2rem; line-height: 1.8; color: #555; text-align: justify;">
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="col-md-5">
+        <img src="images/Photography/121260.jpg" alt="個人照片">
+      </div>
+      <div class="col-md-7">
+        <h2>關於我</h2>
+        <p>
           嗨,我是陳涁維,一位對於設計擁有特視覺體驗的內容創作者。從小到大,《寶可夢》一直是我喜歡的系列,無論過了多少年,它都能帶來熟悉的感動和快樂。除了設計，我也喜歡打排球，享受運動帶來的活力。平時偶爾會被貓咪或狐狸小故事吸引,但我總會回到自己的設計世界,追求更具創造感成就感的作品。無論是平面設計、3D建模,我只是希望作品看起來不無聊，能讓人多看一眼就好。
         </p>
       </div>
     </div>
   </section>
-  
 
   <!-- Portfolio Section -->
   <section id="portfolio">
     <div class="container">
-      <h2 class="text-center mb-5 dynamic-text">My Work</h2>
+      <h2 class="text-center mb-5">My Work</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="card">
@@ -187,8 +195,8 @@
   <!-- Contact Section -->
   <section id="contact" class="text-center">
     <div class="container">
-      <h2 class="dynamic-text">Contact Me</h2>
-      <p class="dynamic-text">Follow me on social media or send me a message!</p>
+      <h2>Contact Me</h2>
+      <p>Follow me on social media or send me a message!</p>
       <div>
         <a href="https://www.instagram.com/yong00_1006" class="btn btn-light mx-2">Instagram</a>
         <a href="https://twitter.com/" class="btn btn-light mx-2">Twitter</a>
@@ -199,18 +207,28 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 My Portfolio. Designed with passion.</p>
+    <div class="container">
+      <p>&copy; 2024 My Portfolio. Designed with passion.</p>
+    </div>
   </footer>
 
   <script>
-    document.addEventListener('scroll', () => {
-      const elements = document.querySelectorAll('.dynamic-text');
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-          el.classList.add('visible');
-        }
-      });
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      const content = document.querySelector('.content');
+      if (window.scrollY > 50) {
+        content.style.transform = 'translateX(100%)';
+      } else {
+        content.style.transform = 'translateX(0)';
+      }
     });
   </script>
 </body>
